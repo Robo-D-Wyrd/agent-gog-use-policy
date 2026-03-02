@@ -7,11 +7,12 @@ Provide guardrails for agents using `gog` to interact with Google Drive, aligned
 
 ## Core Principles (from the talk)
 - **Use a work account** (avoid visitor access). Visitor sharing expires and creates permission ambiguity.
-- **Prefer Shared Drives** over My Drive for collaborative work.
+- **Use Shared Drives Exclusively for collaborative work** Use My Drive for scratch files, or shortcuts specific to you that don't need sharing.
 - **Share with teams, not individuals** (use Google Groups when possible).
-- **Pre‑share by creating files inside the correct folder/drive** (avoid later moves).
-- **Avoid copies**; use **shortcuts** for multi‑location visibility.
-- **Use version history instead of file cloning**; deprecate with care instead of deleting.
+- **Pre‑share by creating files inside the correct folder/drive from the start** (Removes the need to file later and simplifies permissions).
+- **Avoid copies**; use **shortcuts** for multi‑location visibility. 
+- **Use version history instead of file cloning**;
+- **deprecate with care instead of deleting** (provide a url to new source)
 
 ## Policy Scope
 - Applies to all automation/agents using `gog drive` and `gog docs` against Google Drive.
@@ -58,9 +59,6 @@ Provide guardrails for agents using `gog` to interact with Google Drive, aligned
 ## Example Safe Commands
 ```
 gog drive search "MDSC requirements" --account <email>
-gog docs cat <docId> --account <email>
-gog drive copy <fileId> "Copy - MDSC" --parent <folderId>
-```
 
 ## Example Restricted Command (requires approval)
 ```
